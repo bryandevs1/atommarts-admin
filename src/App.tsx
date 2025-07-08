@@ -23,6 +23,7 @@ import VendorTable from "./pages/Vendors";
 import PendingVendorsTable from "./pages/PendingVendors";
 import Payouts from "./pages/Payouts";
 import CategoriesTable from "./pages/Categories";
+import { ToastContainer } from "react-toastify";
 
 // Add this authentication check (you'll need to implement your actual auth logic)
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
@@ -107,6 +108,17 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

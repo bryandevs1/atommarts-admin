@@ -57,6 +57,7 @@ export default function VendorTable() {
 
       const data = await response.json();
       setUsers(data.data);
+      console.log("Fetched users:", data.data);
       setTotalItems(data.total);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");

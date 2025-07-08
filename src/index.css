@@ -776,3 +776,9 @@ span.flatpickr-weekday,
 .simplebar-scrollbar.simplebar-visible:before {
   @apply opacity-100;
 }
+
+/* In your global CSS file */
+.Toastify__toast-container {
+  top: 80px !important;
+  right: 1em !important;
+}
